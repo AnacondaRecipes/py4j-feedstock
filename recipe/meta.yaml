@@ -42,7 +42,7 @@ about:
     Methods are called as if the Java objects resided in the Python interpreter and Java collections can be accessed through standard Python collection methods. 
     Py4J also enables Java programs to call back Python objects.
   dev_url: https://github.com/bartdag/py4j
-  doc_url: https://py4j.sourceforge.net/
+  doc_url: https://www.py4j.org/contents.html
 
 extra:
   recipe-maintainers:
