@@ -32,7 +32,7 @@ test:
     - pip check
 
 about:
-  home: https://py4j.sourceforge.net/
+  home: https://www.py4j.org/
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt
