@@ -1,5 +1,5 @@
 {% set name = "py4j" %}
-{% set version = "0.10.9.2" %}
+{% set version = "0.10.9.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,9 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 624f97c363b8dd84822bc666b12fa7f7d97824632b2ff3d852cc491359ce7615
+  sha256: 0d92844da4cb747155b9563c44fc322c9a1562b3ef0979ae692dbde732d784dd
 
 build:
-  noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -19,7 +18,7 @@ requirements:
     - pip
     - python
     - setuptools
-
+    - wheel
   run:
     - python
 
@@ -27,15 +26,23 @@ test:
   imports:
     - py4j
     - py4j.tests
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
-  home: http://py4j.sourceforge.net/
+  home: https://www.py4j.org/
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt
   summary: Enables Python programs to dynamically access arbitrary Java objects
+  description: |
+    Py4J enables Python programs running in a Python interpreter to dynamically access Java objects in a Java Virtual Machine. 
+    Methods are called as if the Java objects resided in the Python interpreter and Java collections can be accessed through standard Python collection methods. 
+    Py4J also enables Java programs to call back Python objects.
   dev_url: https://github.com/bartdag/py4j
-  doc_url: http://py4j.sourceforge.net/
+  doc_url: https://www.py4j.org/contents.html
 
 extra:
   recipe-maintainers:
