@@ -1,6 +1,6 @@
 {% set name = "py4j" %}
 
-{% set version = "0.10.9.7" %}
+{% set version = "0.10.9.9" %}
 
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0b6e5315bb3ada5cf62ac651d107bb2ebc02def3dee9d9548e3baac644ea8dbb
+  sha256: f694cad19efa5bd1dee4f3e5270eb406613c974394035e5bfc4ec1aba870b879
 
 
 build:
